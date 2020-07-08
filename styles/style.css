@@ -9,3 +9,69 @@
     font-family: 'Lora', serif;
     font-family: 'Ubuntu', sans-serif;
 */
+
+* {
+    margin: 0;
+    /* padding: 0; */
+    /* box-sizing: border-box; */
+}
+
+/*  =================
+    Typography
+    ================*/
+.header {
+    text-align: center;
+    font-family: 'Lora', serif;
+    background-color: #f1f1f1;
+    padding: 2em 0; /* 2em 'cuz it's like 32px */
+}
+
+.title-logo h1 {
+    font-size: 3.37rem;
+    color: var(--color-gray);
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.title-logo p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-magenta);
+    text-transform: uppercase;
+}
+
+/* styling the nav */
+
+nav {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+nav ul {
+    /* border: 1px solid black; */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    /* we add space between the items 'cuz we may add a new link in the future */
+    margin: 0 1em;
+
+}
+
+nav a {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* this focus keeps the color changed */
+nav a:hover,
+nav a:focus {
+    color: var(--color-magenta);
+}
