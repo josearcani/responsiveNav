@@ -27,7 +27,7 @@
 }
 
 .title-logo h1 {
-    font-size: 3.37rem;
+    font-size: 2.37rem;
     color: var(--color-gray);
     text-transform: capitalize;
     font-weight: 400;
@@ -39,18 +39,32 @@
     font-weight: bold;
     color: var(--color-magenta);
     text-transform: uppercase;
-    margin-bottom: 1.5em;
+    /* margin-bottom: 1.5em; */
+
 }
 
 /*  =================
     Layout
     ================*/
 
+.container {
+    border: 1px solid magenta;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
 /* navigation */
 
 nav {
     max-width: 980px;
-    margin: 0 auto;
+    margin: auto 0;
 }
 
 nav ul {
@@ -59,11 +73,12 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    /* margin: 0; */
 }
 
 nav li {
     /* we add space between the items 'cuz we may add a new link in the future */
-    margin: 0 1.5em;
+    margin-left: 2em;
 }
 
 nav a {
