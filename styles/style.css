@@ -57,7 +57,18 @@
 .container-nav {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+}
+
+/* to change the layout */
+@media (max-width: 675px) {
+    .container-nav {
+        flex-direction: column;
+    }
     
+    nav ul {
+        flex-direction: column;
+    }
 }
 
 /* navigation */
@@ -68,17 +79,29 @@ nav {
 }
 
 nav ul {
-    /* border: 1px solid black; */
+    display: flex;
     list-style: none;
     padding: 0;
-    display: flex;
     justify-content: center;
+    /* border: 1px solid black; */
     /* margin: 0; */
 }
 
 nav li {
     /* we add space between the items 'cuz we may add a new link in the future */
     margin-left: 2em;
+}
+
+/* for spaceing between elements */
+@media (max-width: 675px) {
+    .title-logo {
+        margin-bottom: 1em;;
+    }
+
+    nav li {
+        margin-left: 0;
+        margin-bottom: 1.25em;
+    }
 }
 
 nav a {
