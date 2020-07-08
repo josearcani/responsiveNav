@@ -39,6 +39,7 @@
     font-weight: bold;
     color: var(--color-magenta);
     text-transform: uppercase;
+    margin-bottom: 1.5em;
 }
 
 /*  =================
@@ -62,7 +63,7 @@ nav ul {
 
 nav li {
     /* we add space between the items 'cuz we may add a new link in the future */
-    margin: 0 1em;
+    margin: 0 1.5em;
 }
 
 nav a {
