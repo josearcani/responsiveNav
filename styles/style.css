@@ -19,6 +19,7 @@
 /*  =================
     Typography
     ================*/
+
 .header {
     text-align: center;
     font-family: 'Lora', serif;
@@ -27,7 +28,7 @@
 }
 
 .title-logo h1 {
-    font-size: 2.37rem;
+    font-size: 2rem;
     color: var(--color-gray);
     text-transform: capitalize;
     font-weight: 400;
@@ -127,4 +128,31 @@ nav a:focus {
 
 .current-page {
     border-bottom: 2px solid var(--color-gray);
+}
+
+/* ========= content ========= */
+
+.container-content {
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.article-image {
+    width: 100%;
+}
+
+.main-content {
+    border: 1px solid black;
+    width: 70%;
+
+}
+
+.sidebar {
+    border: 1px solid black;
+    width: 25%;
+
+
 }
