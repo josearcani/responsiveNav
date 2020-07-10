@@ -20,7 +20,8 @@ body {
     font-weight: 300;
 }
 
-.article-image {
+.article-image,
+.widget-image {
     max-width: 100%;
     display: block;
 }
@@ -33,6 +34,10 @@ body {
     text-align: center;
     background-color: #f1f1f1;
     padding: 2em 0; /* 2em 'cuz it's like 32px */
+}
+
+.title-logo {
+    margin-bottom: 1em;
 }
 
 .title-logo h1 {
@@ -56,12 +61,8 @@ h3 {
     font-weight: 400;
     color: var(--color-gray);
     text-transform: capitalize;
-}
-
-.article-body,
-.widget-body {
-    /* text-transform: uppercase; */
-
+    /* for collapsing margins */
+    margin-top: 0;
 }
 
 a {
@@ -80,7 +81,8 @@ a:focus {
 strong {
     font-weight: 700;
 }
-/* h1 subtitle */
+
+/* articles */
 
 .arcticle-title {
     font-size: 1.5rem;
@@ -109,6 +111,33 @@ strong {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.article-featured {
+    border-bottom: 1px solid var(--color-gray);
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+}
+
+.article-info {
+    margin: 2em 0;
+}
+
+.article-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+/* order in acticles */
+
+.article-recent-main {
+    order: 2
+}
+.article-recent-secondary {
+    order: 1;
+}
+
+
+
 /*  =================
     Layout
     ================*/
@@ -122,20 +151,43 @@ strong {
 .container-flex {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 /* to change the layout */
-@media (max-width: 675px) {
+@media (min-width: 787px) {
     .container-flex {
-        flex-direction: column;
+        flex-direction: row;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+
+    .sidebar {
+        width: 25%;
+    }
+
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .article-image {
+        width: 100%;
+        min-height: 250px;
+        object-fit: cover;
+    }
+
+    .article-recent-main {
+        width: 60%;
     }
     
-    nav ul {
-        flex-direction: column;
+    .article-recent-secondary {
+        width: 35%;
     }
+    
 }
-
 /* navigation */
 
 nav {
@@ -148,24 +200,25 @@ nav ul {
     list-style: none;
     padding: 0;
     justify-content: center;
+    flex-direction: column;
     /* border: 1px solid black; */
     /* margin: 0; */
 }
 
 nav li {
     /* we add space between the items 'cuz we may add a new link in the future */
-    margin-left: 2em;
+    margin-left: 0;
+    margin-bottom: 1.25em;
 }
 
 /* for spaceing between elements */
-@media (max-width: 675px) {
-    .title-logo {
-        margin-bottom: 1em;;
+@media (min-width: 787px) {
+    nav ul {
+        flex-direction: row;
     }
-
     nav li {
-        margin-left: 0;
-        margin-bottom: 1.25em;
+        margin-left: 2em;
+
     }
 }
 
@@ -185,7 +238,6 @@ nav a:focus {
     /* border-bottom: 2px solid var(--color-dark-blue); */
 }
 
-/* adding the underline */
 
 .current-page:hover {
     color: var(--color-gray);
@@ -200,15 +252,3 @@ nav a:focus {
 
 
 
-.main-content {
-    border: 1px solid black;
-    width: 70%;
-
-}
-
-.sidebar {
-    border: 1px solid black;
-    width: 25%;
-
-
-}
