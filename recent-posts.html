@@ -16,9 +16,9 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="./index.html" class="current-page">home</a></li>
+                    <li><a href="./index.html">home</a></li>
                     <li><a href="./about.html">about me</a></li>
-                    <li><a href="./recent-posts.html">recent post</a></li>
+                    <li><a href="./recent-posts.html" class="current-page">recent post</a></li>
                 </ul>
             </nav>
         </div> <!-- / .container -->
@@ -27,16 +27,20 @@
         <!-- semantic only one main -->
         <main role="main" class="main-content">
 
-            <!-- article si self contain <h1><header>etc -->
-            <article class="article-featured">
-                <!-- the order can be changed with flexbox -->
-                <h2 class="article-title">finding simplicity in life</h2>
-                <img src="./img/life-1.jpg" alt="a picture of a plant" class="article-image">
-                <p class="article-info">july 23, 2019 | 3 comments</p>
-                <p class="article-body"><strong>Life can get complicated really quickly</strong>, Lorem ipsum dolor sit amet consectetur adipisicing. <a href="#">Modi optio perferendis ullam et inventore, architecto hic minus doloremque</a> sapiente, est voluptates placeat eveniet distinctio quidem rerum dignissimos. Velit laboriosam veritatis expedita ut exercitationem unde quo quae, sed suscipit quis reprehenderit?</p>
-                <a href="#" class="article-read-more">continue reading</a>
+            <!-- secondary article -->
+            <article class="article-recent">
+                <div class="article-recent-main">
+                    <h2 class="article-title">finding simplicity in life</h2>
+                    <p class="article-body"><strong>Life can get complicated really quickly</strong>, Lorem ipsum dolor sit amet consectetur adipisicing. <a href="#">Modi optio perferendis ullam et inventore, architecto hic minus doloremque</a> sapiente, est voluptates placeat eveniet distinctio quidem rerum dignissimos. Velit laboriosam veritatis expedita ut exercitationem unde quo quae, sed suscipit quis reprehenderit?</p>
+                    <a href="#" class="article-read-more">continue reading</a>
+                </div>
+                <!-- it's divided 'cuz for bigger screens we want two columns -->
+                <div class="article-recent-secondary">
+                    <img src="./img/life-1.jpg" alt="a picture of a plant" class="article-image">
+                    <p class="article-info">july 23, 2019 | 3 comments</p>
+                </div>
             </article>
-            <!-- end of article -->
+            <!-- end secondary article -->
 
             <!-- secondary article -->
             <article class="article-recent">
